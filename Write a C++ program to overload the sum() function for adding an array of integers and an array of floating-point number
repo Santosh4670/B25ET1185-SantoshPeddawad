@@ -1,0 +1,44 @@
+#include <iostream>
+using namespace std;
+
+class ArraySum
+{
+public:
+    // sum() for integer array
+    int sum(int arr[], int n)
+    {
+        int total = 0;
+
+        for (int i = 0; i < n; i++)
+            total += arr[i];
+
+        return total;
+    }
+
+    // Overloaded sum() for floating-point array
+    float sum(float arr[], int n)
+    {
+        float total = 0;
+
+        for (int i = 0; i < n; i++)
+            total += arr[i];
+
+        return total;
+    }
+};
+
+int main()
+{
+    ArraySum obj;
+
+    int a[] = {10, 20, 30, 40, 50};
+    float b[] = {1.5, 2.5, 3.5, 4.5};
+
+    cout << "Sum of integer array = "
+         << obj.sum(a, 5) << endl;
+
+    cout << "Sum of floating-point array = "
+         << obj.sum(b, 4) << endl;
+
+    return 0;
+}
